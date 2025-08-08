@@ -8,8 +8,7 @@ Intrusion Detection using classical ML models and a Keras deep learning model tr
 .
 ├── artifacts/                    # Saved models and training artifacts (.pkl)
 ├── data/
-│   ├── raw/                      # Original datasets (KDDTrain.txt, KDDTest.txt)
-│   └── processed/                # Intermediate processed data
+│   └── raw/                      # Original datasets (KDDTrain.txt, KDDTest.txt)
 ├── docs/
 │   ├── papers/                   # Project-related PDFs
 │   ├── references/               # Reference PDFs
@@ -18,7 +17,7 @@ Intrusion Detection using classical ML models and a Keras deep learning model tr
 ├── notebooks/
 │   ├── 01_training_and_saving.ipynb     # Train models and save artifacts
 │   └── 02_inference_and_evaluation.ipynb# Load artifacts and evaluate/infer
-├── scripts/                      # (optional) utility scripts
+├── scripts/                      # Utility scripts for formatting/refactoring
 └── src/ids/                      # (optional) python package for future modularization
 ```
 
@@ -29,7 +28,7 @@ Intrusion Detection using classical ML models and a Keras deep learning model tr
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -39,7 +38,7 @@ Place the datasets in `data/raw/` as:
 - `data/raw/KDDTrain.txt`
 - `data/raw/KDDTest.txt`
 
-The repository already includes these if available. Large raw data and generated artifacts are ignored by git (except for `.gitkeep`).
+The repository already includes these if available. Large raw data and generated artifacts are ignored by git.
 
 ## Usage
 
@@ -51,6 +50,13 @@ jupyter lab  # or: jupyter notebook
 
 - Start with `notebooks/01_training_and_saving.ipynb` to train and persist models/columns
 - Use `notebooks/02_inference_and_evaluation.ipynb` to load artifacts and evaluate or run inference
+
+## Deep Learning artifact
+
+Notebook 02 expects a pre-trained DL model in `artifacts/` with one of these names:
+- `model_dl.pkl` (joblib)
+- `model_dl.h5` (Keras H5)
+- `model_dl/` (Keras SavedModel directory)
 
 ## Notes
 
