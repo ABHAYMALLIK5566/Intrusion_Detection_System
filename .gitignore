@@ -15,7 +15,7 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Build artifacts
+# Build
 build/
 dist/
 *.egg-info/
@@ -31,11 +31,11 @@ htmlcov/
 .vscode/
 .idea/
 
-# Data and artifacts
+# Data — large files, not tracked in git
 data/raw/*
-data/processed/*
 !data/raw/.gitkeep
-!data/processed/.gitkeep
+
+# Artifacts — models & plots are generated locally, not tracked in git
 artifacts/*
 !artifacts/.gitkeep
 
