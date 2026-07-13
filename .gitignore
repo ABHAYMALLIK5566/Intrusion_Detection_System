@@ -35,10 +35,6 @@ htmlcov/
 data/raw/*
 !data/raw/.gitkeep
 
-# Artifacts — models & plots are generated locally, not tracked in git
-artifacts/*
-!artifacts/.gitkeep
-
 # Logs
 logs/
 *.log
